@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitação de Serviços - CODOJA LR</title>
+</head>
+<body>
+    <h2>Solicitação de Serviços</h2>
+    <form action="processa.php" method="POST">
+        <h3>1° Passo - Identificação</h3>
+        Nome completo: <input type="text" name="nome" required><br>
+        Data de nascimento: <input type="date" name="data_nascimento" required><br>
+        N° do B.I: <input type="text" name="bi" required><br>
+        Morada: <input type="text" name="morada" required><br>
+        Estado civil:
+        <select name="estado_civil">
+            <option value="solteiro">Solteiro</option>
+            <option value="casado">Casado</option>
+        </select><br>
+        Função profissional: <input type="text" name="funcao" required><br>
+        Quem está solicitando?
+        <select name="tipo_solicitante">
+            <option value="individual">Pessoa Individual</option>
+            <option value="empresa">Empresa</option>
+        </select><br>
+
+        <h3>2° Passo - Solicitação do Serviço</h3>
+        <input type="radio" name="servico" value="limpeza" required> Serviços de Limpeza<br>
+        <input type="radio" name="servico" value="domestico"> Serviços Domésticos<br>
+
+        <h3>3° Passo - Pacote</h3>
+        <select name="pacote">
+            <option value="shalom">Pacote Shalom</option>
+            <option value="zohar">Pacote Zohar</option>
+            <option value="elysium">Pacote Elysium</option>
+            <option value="premium">Pacote Premium</option>
+        </select><br>
+
+        <h3>4° Passo - Número de Servos</h3>
+        <input type="number" name="num_servos" min="1" max="10" required><br>
+
+        <h3>5° Passo - Forma de Pagamento</h3>
+        <select name="pagamento">
+            <option value="transferencia_bancaria">Transferência Bancária</option>
+            <option value="transferencia_express">Transferência Express</option>
+            <option value="deposito">Depósito</option>
+        </select><br>
+
+        <h3>6° Passo - Envio do Comprovativo</h3>
+        <p>Envie o comprovativo pelo WhatsApp: <a href="https://wa.me/941305428">Clique aqui</a></p>
+
+        <h3>7° Passo - Conclusão</h3>
+        Email: <input type="email" name="email" required><br>
+        <button type="submit">Enviar Solicitação</button>
+    </form>
+</body>
+</html>
